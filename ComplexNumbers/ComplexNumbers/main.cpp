@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
-
+#include "Complex.hpp"
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Complex five = Complex(5, 1);
+    Complex six = Complex(6, 1);
+    float seven = 7;
+    std::cout << five + seven << endl;
     return 0;
 }
