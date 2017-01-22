@@ -9,9 +9,11 @@
 #include <iostream>
 #include "Complex.hpp"
 int main(int argc, const char * argv[]) {
-    Complex five = Complex(5, 1);
-    Complex six = Complex(6, 1);
-    float seven = 7;
-    std::cout << five + seven << endl;
+    Complex five = Complex(6, 3);
+    Complex six = Complex(1, 7);
+    
+    five = six;
+    
+    std::cout << five << endl;
     return 0;
 }
