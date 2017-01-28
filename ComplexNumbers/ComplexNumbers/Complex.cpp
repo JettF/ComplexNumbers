@@ -7,20 +7,28 @@
 //
 #include "Complex.hpp"
 
+// MARK: - Static Properties
+
+Complex const Complex::i = Complex(0, 1);
+
+// MARK: - Constructors
+
+Complex::Complex():rPart(1.0), iPart(1.0) {};
+
+Complex::Complex(float real, float imaginary): rPart(real), iPart(imaginary) {};
+
 // MARK: - Assignment
 
 const Complex& Complex::operator=(float operand) {
     rPart = operand;
     iPart = 1.0;
-    static const Complex complex = Complex(rPart, iPart);
-    return complex;
+    return *this;
 };
 
 const Complex& Complex::operator=(const Complex& operand) {
-    if (this == &operand) {
-        return *this;
-    } else {
-        
+    if (this != &operand) {
+        rPart = operand.rPart;
+        iPart = operand.iPart;
     }
     
     return *this;
@@ -120,4 +128,3 @@ Complex Complex::operator/(const Complex& operand) const {
 bool Complex::operator==(const Complex& operand) const {
     return rPart == operand.rPart && iPart == operand.iPart;
 };
-

@@ -24,8 +24,8 @@ class Complex {
 
 public:
     static const Complex i;
-    Complex(): rPart(1.0), iPart(1.0) {};
-    Complex(float real, float imaginary): rPart(real), iPart(imaginary) {};
+    Complex();
+    Complex(float, float);
     const Complex & operator=(const Complex&);
     const Complex & operator=(float);
     bool   operator==(const Complex&) const;

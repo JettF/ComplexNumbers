@@ -9,11 +9,17 @@
 #include <iostream>
 #include "Complex.hpp"
 int main(int argc, const char * argv[]) {
-    Complex five = Complex(6, 3);
-    Complex six = Complex(1, 7);
+
+    Complex x = Complex(3, 2);
     
-    five = six;
-    
-    std::cout << five << endl;
+    Complex firstTerm = (x * x * x * x);
+    Complex secondTerm = (x * x * x) * 7;
+    Complex thirdTerm = (x * x) * 4;
+    Complex fourthTerm = x * 9;
+
+    Complex polynomial = (firstTerm + secondTerm - thirdTerm - fourthTerm - 1.0)/2.0;
+
+    std::cout << polynomial << endl;
+
     return 0;
 }
